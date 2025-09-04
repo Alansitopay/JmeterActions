@@ -1,0 +1,15 @@
+name: JMeter Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-jmeter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run JMeter Test
+        uses: QAInsights/PerfAction@v3.1
+        with:
+          test-plan-path: TestPlans/jsonplaceholder_prueba.jmx
