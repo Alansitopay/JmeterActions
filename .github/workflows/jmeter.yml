@@ -21,6 +21,6 @@ jobs:
           path: resultados.jtl
       - name: Upload Html
         uses: actions/upload-artifact@v4
-        width:
+        with:
           name: jmeter-html-report
           path: reportes
