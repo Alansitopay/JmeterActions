@@ -16,7 +16,7 @@ jobs:
           args: "-l resultados.jtl -e -o reportes"
       - name: Upload JTL
         uses: actions/upload-artifact@v4
-        width:
+        with:
           name: jmeter-results
           path: resultados.jtl
       - name: Upload Html
