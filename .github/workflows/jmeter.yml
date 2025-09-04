@@ -8,12 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - name: Run JMeter Test
         uses: QAInsights/PerfAction@v3.1
         with:
           test-plan-path: TestPlans/jsonplaceholder_prueba.jmx
           args: "-l resultados.jtl -e -o reportes"
+
       - name: Upload JTL
         uses: actions/upload-artifact@v4
         with:
